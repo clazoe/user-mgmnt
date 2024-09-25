@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "7bbb904b-3007-4020-a173-372f7410e32f",
+		"name": "canvia-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "registro-usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"nombreUsuario\": \"ines4\",\r\n \"correo\":\"ines4@email.com\",\r\n \"password\":\"ines4\",\r\n \"rol\" : \"ADMINISTRATOR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/auth/creacionUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"auth",
+						"creacionUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpbmVzIiwiaWF0IjoxNzI3MTg1NzQyLCJleHAiOjE3MjcyNzIxNDJ9.a2FHtxVss1FpO2w_sEaY5oSoOZ4wVGb27JMR763Y7Hg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"nombreUsuario\": \"ines\",\r\n \"correo\":\"ines@email.com\",\r\n \"rol\" : \"ADMINISTRADOR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/admins/eliminarUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"admins",
+						"eliminarUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-usuarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpbmVzNCIsImlhdCI6MTcyNzE5NzE2NCwiZXhwIjoxNzI3MjgzNTY0fQ.7SEm2-Eo0db7Q3oeTFNJJg-1X9gDNQlWz6rf2WerIiM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8005/users/usuariosList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"users",
+						"usuariosList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login-usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"nombreUsuario\": \"ines4\",\r\n \"password\":\"ines4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/auth/loginUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"auth",
+						"loginUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put-usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"nombreUsuario\": \"ines4\",\r\n \"password\":\"ines4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/auth/loginUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"auth",
+						"loginUsuario"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
